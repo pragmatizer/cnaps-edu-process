@@ -38,7 +38,6 @@ public class ProcessApplication {
 		SpringApplication.run(ProcessApplication.class, args);
 	}
 
-	/*
 	@Bean
 	public CommandLineRunner demo(TaskRepository taskRepository, ActivityRepository activityRepository, PhaseRepository phaseRepository) {
 		return (args) -> {
@@ -153,5 +152,4 @@ public class ProcessApplication {
 		
 		return phase;
 	}
-	*/
 }
