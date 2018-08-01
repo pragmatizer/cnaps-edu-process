@@ -8,7 +8,6 @@ import javax.persistence.UniqueConstraint;
 
 import com.sk.cnaps.domain.model.AbstractEntity;
 import com.sk.cnaps.domain.model.AggregateProxy;
-import com.sk.cnaps.domain.model.AggregateRelationType;
 import com.sk.cnaps.domain.model.AggregateRoot;
 
 import lombok.AllArgsConstructor;
@@ -38,7 +37,7 @@ public class Phase extends AbstractEntity implements AggregateRoot {
 	@Convert(converter=AggregateProxy.class)
 	@Column(columnDefinition="TEXT")
 	@Builder.Default
-	private AggregateProxy<Activity> activitiesAggregate = new AggregateProxy<>(AggregateRelationType.ONE_TO_MANY);
+	private AggregateProxy<Activity> activitiesAggregate = new AggregateProxy<>();
 	
 	//@Builder.Default
 	//@ElementCollection(fetch=FetchType.EAGER)

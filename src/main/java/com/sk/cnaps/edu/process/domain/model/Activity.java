@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 
 import com.sk.cnaps.domain.model.AbstractEntity;
 import com.sk.cnaps.domain.model.AggregateProxy;
-import com.sk.cnaps.domain.model.AggregateRelationType;
 import com.sk.cnaps.domain.model.AggregateRoot;
 import com.sk.cnaps.domain.util.ListConverter;
 
@@ -52,7 +51,7 @@ public class Activity extends AbstractEntity implements AggregateRoot {
 	@Convert(converter=AggregateProxy.class)
 	@Column(columnDefinition="TEXT")
 	@Builder.Default
-	private AggregateProxy<Task> tasksAggregate = new AggregateProxy<>(AggregateRelationType.ONE_TO_MANY);
+	private AggregateProxy<Task> tasksAggregate = new AggregateProxy<>();
 	
 	//@ElementCollection
 	//@Builder.Default
